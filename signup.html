@@ -25,18 +25,17 @@
 
   <section>
     <link rel="stylesheet" href="signup.css" />
+    <script type="text/javascript" src="main.js"></script>
     <div class="content">
         <div class="main">
-          <form
-            action="javascript:alert(`Username: ${document.getElementById('name').value}\nPassword:${document.getElementById('code').value}`)"
-          >
+            <form name="myForm" onsubmit="validate()">
             <label for="name">Username:</label>
             <br />
-            <input type="text" id="name" />
+            <input type="text" name="name" />
             <br />
             <label for="code">Password:</label>
             <br />
-            <input type="text" id="code" /><br /><br />
+            <input type="text" name="code" /><br /><br />
             <input type="submit" value="submit" />
           </form>
         </div>
