@@ -1,11 +1,13 @@
 @font-face {
-    font-family: "Comfortaa";
-    src: url("Comfortaa-Regular.ttf");
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+
 }
 .content {
   display: flex;
   color: #e6e6e6;
-  font-family: "Comfortaa";
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   justify-content: center;
   align-items: center;
 }
@@ -39,5 +41,5 @@
   text-align: center;
   height: 50%;
   width: 50%;
-  padding: 11em 0 0 0;
+  padding: 5em 0 0 0;
 }
