@@ -1,176 +1,113 @@
-html, body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  line-height: 1;
-  min-height: 100vh;
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
-h1 {
-  font-size: 3em;
+nav {
+  height: 80px;
+  background: #fdcc04;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem calc((100vw - 1300px) / 2);
 }
 
-h2 {
-  font-size: 1.5em;
+.logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 2rem;
+  max-width: 2.5em;
+  max-height: 2.5em;
 }
 
-section {
-  background-image: url("flower.png");
-  min-height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-a {
+nav a {
   text-decoration: none;
   color: #ffffff;
+  padding: 0 1.5rem;
 }
 
-/* Header */
+nav a:hover {
+  color: #fff;
+}
 
-#header {
-    position: fixed;
-    background: rgb(0, 0, 0, 0.5);
-    background-color: #000000;
-    font-size: 0.8em;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
-    color: #ffffff;
+.unity {
+  background: #000000;
+}
+
+.unity-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 95vh;
+  padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+  padding: 0rem 2rem;
+}
+
+.column-left h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.column-left p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border: none;
+  color: #000000;
+  background: #fdcc04;
+  cursor: pointer;
+  border-radius: 50px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+
+
+button:hover {
+  background: transparent;
+  color: #fdcc04;
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+.unity-image {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
   }
-
-    #header .logo {
-        max-width: 3.4em;
-        max-height: 3.4em;
-    }
-
-    #header div {
-      display: inline-flex;
-      width: fit-content;
-      float: left;
-      font-size: 1.6em;
-      margin: 0.7em 3em;
-    }
-
-    #header span {
-      margin: 0;
-    }
-
-    #header span {
-      letter-spacing: 0.075em;
-      text-transform: uppercase;
-      align-self: center;
-      margin-left: 1em;
-    }
-
-    #header nav {
-      position: relative;
-      letter-spacing: 0.075em;
-      text-transform: uppercase;
-      margin: 1.25em 3em ;
-      width: fit-content;
-      float: right;
-    }
-
-      #header nav ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-        #header nav ul li {
-          display: inline-block;
-          margin-left: 1.5em;
-          padding-left: 0;
-        }
-
-
-          #header nav ul li a {
-            border: solid 1px transparent;
-            color: inherit;
-            display: inline-block;
-            line-height: 1em;
-            padding: 0.6em 0.75em;
-            text-decoration: none;
-          }
-
-          #header nav ul li input[type="button"],
-          #header nav ul li input[type="submit"],
-          #header nav ul li input[type="reset"],
-          #header nav ul li button,
-          #header nav ul li .button {
-            font-size: 1em;
-            min-width: 0;
-            width: auto;
-          }
-
-          /*#header nav ul li.active > a, #header nav ul li:hover > a {
-            -moz-transition: all 0.2s ease-in-out;
-            -webkit-transition: all 0.2s ease-in-out;
-            -ms-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-            background: rgba(255, 255, 255, 0.15);
-          }*/
-
-      #header nav ul li.active > a, #header nav ul li:hover > a {
-        border: solid 1px;
-      }
-
-/* Button */
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"],
-  button,
-  .button {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    background: none;
-    border: solid 1px;
-    border-radius: 7px;
-    color: inherit;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 0.8em;
-    font-weight: 900;
-    letter-spacing: 2px;
-    min-width: 18em;
-    padding: 0 0.75em;
-    line-height: 3.75em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-    input[type="button"],
-    input[type="submit"],
-    input[type="reset"],
-    button,
-    .button {
-      background: rgb(255, 255, 255, 0.5);
-      border-color: #000000;
-      color: #000000 !important;
-      width: 100%;
-    }
-
-    input[type="button"]:hover,
-    input[type="submit"]:hover,
-    input[type="reset"]:hover,
-    button:hover,
-    .button:hover {
-      background: rgb(255, 255, 255, 0.15) !important;
-      border-color: #000 !important;
-    }
-
-/* Form */
+}
 
 label {
   font-size: 1.2em;
@@ -194,62 +131,6 @@ input[type="text"] {
   color: #000000;
   font-size: 1em;
   padding: 0 1em;
-}
-
-/* Content */
-@font-face {
-    font-family: "Comfortaa";
-    src: url("Comfortaa-Regular.ttf");
-}
-.content {
-  display: flex;
-  color: #e6e6e6;
-  font-family: "Comfortaa";
-}
-
-.content .column {
-  height: 50%;
-  width: 35%;
-  margin: 0 5% 0 10%;
-  padding: 11em 0 0 0;
-}
-
-.content .column img {
-  max-width: 70%;
-  max-height: 70%;
-}
-
-.content .column h2 {
-  margin-bottom: 2em;
-}
-
-.content .main {
-  text-align: left;
-  height: 50%;
-  width: 50%;
-  padding: 11em 0 0 0;
-}
-
-/* footer */
-
-#footer {
-    position: fixed;
-    background: rgb(0, 0, 0, 0.5);
-    background-color: #000000;
-    font-size: 0.8em;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-    color: #ffffff;
-  }
-
-.shadow {
-  width: 15em;
-  border: 1px solid #333333;
-  box-shadow: 8px 8px 5px #444444;
-  padding: 8px 12px;
-  background-image: linear-gradient(180deg, #ffffff, #dddddd 40%, #cccccc);
 }
 
 .loader{
@@ -288,4 +169,3 @@ input[type="text"] {
     transform:rotate(1turn);
   }
 }
-
