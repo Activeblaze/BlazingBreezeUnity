@@ -26,20 +26,36 @@ nav {
   max-height: 2.5em;
 }
 
-
-
 nav a {
+  align-items: right;
+  font-size: 1em;
+  position: relative;
   text-decoration: none;
   color: #ffffff;
-  padding: 0 1.5rem;
+  padding: 1rem 2.125rem;
+
 }
 
 nav a:hover {
-  color: #ffffff;
+  padding: 1rem 2.125rem;
+  font-size: 1rem;
+  border: none;
+  color: #000000;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .unity {
-  background: #000000;
+  background: black;
 }
 
 .unity-container {
@@ -183,4 +199,59 @@ input[type="text"] {
    top: 0;
    bottom: 0;
    z-index: -1;
+}
+
+
+.product-info-container{
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif;
+ font-size: 200%;
+ text-align: center;
+ color:#000000;
+ position:left;
+ display: flex;
+ justify-content: space-around;
+  
+}
+.product-container {
+  position: center;
+  display: flex;
+  justify-content: space-around;
+  height: 200;
+  width: 100%;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.product-card:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.product-card h2 {
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  margin-bottom: 20px;
+}
+
+.product-card button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #444444;
 }
