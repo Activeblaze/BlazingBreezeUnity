@@ -205,33 +205,38 @@ input[type="text"] {
 .product-info-container{
  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif;
  font-size: 200%;
+right:100px;
  text-align: center;
- color:#000000;
- position:left;
+ color:#ffffff;
+ position:center;
  display: flex;
- justify-content: space-around;
+ background: #000000;
   
 }
 .product-container {
+  background: #000000;
   position: center;
   display: flex;
   justify-content: space-around;
-  height: 200;
+  top: 1000px;
+  height: 95% ;
   width: 100%;
 }
 
 .product-card {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
-  padding: 20px;
+  background: #F5C500;
+  color: #000000;
+  border-radius: 50px;
+  padding: 10px;
   text-align: center;
-  width: 30%;
+  height:70%;
+  width: 25%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease;
 }
 
 .product-card:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background:
 }
 
 .product-card h2 {
@@ -244,7 +249,7 @@ input[type="text"] {
 
 .product-card button {
   background-color: #000000;
-  color: #ffffff;
+  color: #fdcc04;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -253,5 +258,6 @@ input[type="text"] {
 }
 
 .product-card button:hover {
-  background-color: #444444;
+  background-color: #fdcc04;
+  color: #000000;
 }
