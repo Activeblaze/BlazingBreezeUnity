@@ -55,6 +55,7 @@ input {
 
 input[type="submit"] {
   height: 3.75em !important;
+  cursor: pointer;
 }
 
 input[type="text"] {
